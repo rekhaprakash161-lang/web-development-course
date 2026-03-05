@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Development Course</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#0b1220;color:#e2e8f0;scroll-behavior:smooth}
+
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 8%;background:#020617;position:sticky;top:0;z-index:10}
+.logo{font-size:24px;font-weight:700;color:#38bdf8}
+nav a{color:#e2e8f0;margin-left:25px;text-decoration:none;font-weight:500;transition:.3s}
+nav a:hover{color:#38bdf8}
+
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 10%;background:linear-gradient(120deg,#020617,#1e293b);position:relative;overflow:hidden}
+.hero h1{font-size:64px;margin-bottom:20px}
+.hero p{color:#94a3b8;margin-bottom:30px;font-size:18px}
+.btn{background:#38bdf8;color:#020617;padding:14px 32px;border-radius:30px;text-decoration:none;font-weight:600;transition:.3s}
+.btn:hover{transform:scale(1.08)}
+
+.parallax-bg{position:absolute;width:120%;height:120%;background:radial-gradient(circle,#38bdf820,transparent);top:-10%;left:-10%;z-index:0;transform:translateY(0)}
+.hero-content{position:relative;z-index:1}
+
+.section{padding:100px 10%;text-align:center}
+.section h2{font-size:36px;margin-bottom:50px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+.card{background:#1e293b;border-radius:16px;padding:25px;transition:.4s;transform:translateY(40px);opacity:0}
+.card img{width:100%;border-radius:10px;margin-bottom:15px}
+.card.visible{transform:translateY(0);opacity:1}
+.card:hover{transform:translateY(-10px) scale(1.04);background:#334155}
+
+.testimonials{max-width:900px;margin:auto}
+.testimonial{background:#1e293b;padding:25px;border-radius:14px;margin-bottom:20px;transform:translateY(40px);opacity:0;transition:1s}
+.testimonial.visible{transform:translateY(0);opacity:1}
+
+form{max-width:500px;margin:auto;display:flex;flex-direction:column;gap:15px}
+input,select{padding:12px;border-radius:8px;border:none}
+button{padding:12px;border:none;border-radius:25px;background:#38bdf8;color:#020617;font-weight:600;cursor:pointer}
+button:hover{transform:scale(1.05)}
+
+.payment-box{max-width:600px;margin:auto;background:#1e293b;padding:30px;border-radius:14px;transform:translateY(40px);opacity:0;transition:1s}
+.payment-box.visible{transform:translateY(0);opacity:1}
+
+.contact-box{margin-top:20px;font-size:18px}
+.contact-box a{color:#38bdf8;text-decoration:none;font-weight:600}
+.contact-box p{margin:10px 0}
+
+footer{text-align:center;padding:25px;background:#020617;margin-top:60px;color:#94a3b8}
+
+.scroll-indicator{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);font-size:14px;color:#94a3b8;animation:scrollPulse 2s infinite}
+
+@keyframes scrollPulse{
+0%{opacity:.2;transform:translate(-50%,0)}
+50%{opacity:1;transform:translate(-50%,10px)}
+100%{opacity:.2;transform:translate(-50%,0)}
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">Web Development Course</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#courses">Course</a>
+<a href="#testimonials">Reviews</a>
+<a href="#enroll">Enroll</a>
+<a href="#payment">Payment</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="parallax-bg" id="parallax"></div>
+<div class="hero-content">
+<h1>Learn Web Development</h1>
+<p>Build modern websites with HTML, CSS and JavaScript like Apple & Tesla style landing pages.</p>
+<a class="btn" href="#enroll">Join Course</a>
+</div>
+<div class="scroll-indicator">Scroll Down ↓</div>
+</section>
+
+<section class="section" id="courses">
+<h2>What You Will Learn</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6">
+<h3>HTML</h3>
+<p>Learn the structure of professional websites.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2">
+<h3>CSS & Animations</h3>
+<p>Create modern UI designs and animations.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+<h3>JavaScript</h3>
+<p>Add powerful interactivity and logic.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+<h3>Real Projects</h3>
+<p>Build startup level websites.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="testimonials">
+<h2>Student Testimonials</h2>
+<div class="testimonials">
+
+<div class="testimonial">
+<p>"This course helped me build my first website."</p>
+<strong>– Rahul</strong>
+</div>
+
+<div class="testimonial">
+<p>"I learned animations and modern design."</p>
+<strong>– Priya</strong>
+</div>
+
+<div class="testimonial">
+<p>"Best beginner web development course."</p>
+<strong>– Arjun</strong>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="enroll">
+<h2>Student Enrollment</h2>
+<form>
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="tel" placeholder="Phone Number" required>
+<select>
+<option>Select Level</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+</select>
+<button type="submit">Enroll Now</button>
+</form>
+</section>
+
+<section class="section" id="payment">
+<h2>Course Payment</h2>
+<div class="payment-box">
+<p>Course Fee: <strong>₹2999</strong></p>
+<p>After payment send screenshot on Instagram.</p>
+<br>
+<p><strong>Instructor:</strong> Sanjay</p>
+<p><strong>Phone:</strong> <a href="tel:9113520450">Call 9113520450</a></p>
+<p><strong>Instagram:</strong> <a href="https://instagram.com/s.sanjayy2" target="_blank">Message @s.sanjayy2</a></p>
+</div>
+</section>
+
+<section class="section" id="contact">
+<h2>Contact</h2>
+<div class="contact-box">
+<p><strong>Name:</strong> Sanjay</p>
+<p><strong>Phone:</strong> <a href="tel:9113520450">9113520450</a></p>
+<p><strong>Instagram:</strong> <a href="https://instagram.com/s.sanjayy2" target="_blank">@s.sanjayy2</a></p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Web Development Course | Instructor Sanjay</p>
+</footer>
+
+<script>
+const cards=document.querySelectorAll('.card');
+const testimonials=document.querySelectorAll('.testimonial');
+const payment=document.querySelector('.payment-box');
+
+function reveal(){
+const trigger=window.innerHeight*0.85;
+
+cards.forEach(card=>{
+const top=card.getBoundingClientRect().top;
+if(top<trigger){card.classList.add('visible');}
+});
+
+testimonials.forEach(t=>{
+const top=t.getBoundingClientRect().top;
+if(top<trigger){t.classList.add('visible');}
+});
+
+const pTop=payment.getBoundingClientRect().top;
+if(pTop<trigger){payment.classList.add('visible');}
+}
+
+window.addEventListener('scroll',reveal);
+
+const parallax=document.getElementById('parallax');
+window.addEventListener('scroll',()=>{
+let offset=window.pageYOffset;
+parallax.style.transform='translateY('+offset*0.3+'px)';
+});
+</script>
+
+</body>
+</html>
